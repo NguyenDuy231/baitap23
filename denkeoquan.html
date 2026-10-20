@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đèn kéo quân</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            background-color: #eeeeee;
+        }
+        h1 {
+            color: blue;
+        }
+        .den {
+            width: 600px;
+            height: 350px;
+            margin: 50px auto;
+            position: relative;
+            perspective: 1000px;
+        }
+        .vongquay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            animation: quay 15s infinite linear;
+        }
+        .vongquay:hover {
+            animation-play-state: paused;
+        }
+        .vongquay img {
+            width: 200px;
+            height: 250px;
+            object-fit: cover;
+            position: absolute;
+            left: 200px;
+            top: 40px;
+            border: 3px solid white;
+        }
+        .anh1 {
+            transform: rotateY(0deg) translateZ(300px);
+        }
+        .anh2 {
+            transform: rotateY(60deg) translateZ(300px);
+        }
+        .anh3 {
+            transform: rotateY(120deg) translateZ(300px);
+        }
+        .anh4 {
+            transform: rotateY(180deg) translateZ(300px);
+        }
+        .anh5 {
+            transform: rotateY(240deg) translateZ(300px);
+        }
+        .anh6 {
+            transform: rotateY(300deg) translateZ(300px);
+        }
+        @keyframes quay {
+            from {
+                transform: rotateY(0deg);
+            }
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>ĐÈN KÉO QUÂN</h1>
+    <h2>Lê Nguyễn Duy - 231A010598</h2>
+    <p>Đưa chuột vào hình để dừng, đưa chuột ra để quay tiếp</p>
+    <div class="den">
+        <div class="vongquay">
+            <img class="anh1" src="images/anh1.jpg">
+            <img class="anh2" src="images/anh2.jpg">
+            <img class="anh3" src="images/anh3.jpg">
+            <img class="anh4" src="images/anh4.jpg">
+            <img class="anh5" src="images/anh5.jpg">
+            <img class="anh6" src="images/anh6.jpg">
+        </div>
+    </div>
+</body>
+</html>
